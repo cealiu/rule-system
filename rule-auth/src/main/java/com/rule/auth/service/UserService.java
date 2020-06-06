@@ -36,6 +36,8 @@ public class UserService {
 			String sha512Password = SHAUtil.SHA512(userLoginDto.getPassword());
 			if(null!=result&&result.getPassword().equals(sha512Password)){
 				InitUserRespDTO initUserRespDTO = new InitUserRespDTO();
+				initUserRespDTO.setUserId(result.getUserId());
+				initUserRespDTO.setUserName(result.getUserName());
 				BaseRespUtil.setSuccess(response);
 				response.setData(initUserRespDTO);
 				return response;

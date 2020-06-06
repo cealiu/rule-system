@@ -17,9 +17,6 @@ public class ObjectRestResponse<T> extends BaseResponse {
         return this;
     }
 
-    public boolean isRel() {
-        return rel;
-    }
 
     public void setRel(boolean rel) {
         this.rel = rel;

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rule.auth.dao.UserDao">
+  <resultMap id="BaseResultMap" type="com.rule.auth.dao.po.User">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_name" jdbcType="INTEGER" property="userName" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, user_id, user_name, password, create_time, update_time
+  </sql>
+
+  <select id="selectByUser" resultMap="BaseResultMap" parameterType="com.rule.auth.dao.po.User">
+    select  <include refid="Base_Column_List"/> from user where 1=1
+    <if test="userId !=null and userId !=''">
+      and user_id = #{userId}
+    </if>
+    <if test="userName !=null and userName !=''">
+      and user_name = #{userName}
+    </if>
+  </select>
+
+
+
+
+</mapper>
