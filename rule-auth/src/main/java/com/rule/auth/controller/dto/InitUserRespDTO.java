@@ -15,4 +15,6 @@ public class InitUserRespDTO {
 	private String userName;
 
 	private String userId;
+
+	private String token;
 }

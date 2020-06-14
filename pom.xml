@@ -28,6 +28,9 @@
         <docker.maven.plugin.version>1.2.2</docker.maven.plugin.version>
         <springfox.swagger2.version>2.9.2</springfox.swagger2.version>
         <apache.commons.lang3.version>3.10</apache.commons.lang3.version>
+        <jjwt.version>0.9.1</jjwt.version>
+        <joda-time.version>2.9.5</joda-time.version>
+        <commons-chain.version>1.2</commons-chain.version>
     </properties>
 
     <dependencies>
@@ -65,7 +68,7 @@
             <dependency>
                 <groupId>commons-chain</groupId>
                 <artifactId>commons-chain</artifactId>
-                <version>1.2</version>
+                <version>${commons-chain.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -113,6 +116,18 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>${apache.commons.lang3.version}</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
+            </dependency>
+
 
 
         </dependencies>
